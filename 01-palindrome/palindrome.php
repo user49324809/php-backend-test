@@ -19,12 +19,13 @@ function isPalindrome(string $text): bool
     }
     $left = 0;
     $right = count($chars) - 1;
+
     while ($left < $right) {
         if ($chars[$left] !== $chars[$right]) {
             return false;
         }
-        $right--;
         $left++;
+        $right--;
     }
     return true;
 }

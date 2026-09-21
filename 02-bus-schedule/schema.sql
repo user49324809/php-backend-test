@@ -12,3 +12,11 @@ CREATE TABLE stops (
         FOREIGN KEY (city_id)
         REFERENCES cities(id)
 );
+
+INSERT INTO stops (city_id, name) VALUES
+(1, 'Автовокзал Казань'),
+(1, 'Центральный рынок'),
+(2, 'Автовокзал Уфа'),
+(3, 'Автовокзал Самара'),
+(4, 'Щёлковский автовокзал'),
+(5, 'Автовокзал Пермь');

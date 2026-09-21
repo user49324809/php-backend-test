@@ -6,7 +6,7 @@ function isPalindrome(string $text): bool
 {
     $normalized = mb_strtolower($text, 'UTF-8');
     $normalized = preg_replace(
-        '/[^\p{L}\p{N}+/u',
+        '/[^\p{L}\p{N}]+/u',
         '',
         $normalized
     );

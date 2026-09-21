@@ -10,4 +10,7 @@ function isPalindrome(string $text): bool
         '',
         $normalized
     );
+    if($normalized === null){
+        throw new RuntimeException('Failed to normalize input');
+    }
 }

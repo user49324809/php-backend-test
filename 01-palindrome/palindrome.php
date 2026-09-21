@@ -14,4 +14,7 @@ function isPalindrome(string $text): bool
         throw new RuntimeException('Failed to normalize input');
     }
     $chars = preg_split('//u', $normalized, -1, PREG_SPLIT_NO_EMPTY);
+    $left = 0;
+    $right = count($chars) - 1;
+     
 }

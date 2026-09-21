@@ -10,7 +10,8 @@ function isPalindrome(string $text): bool
         '',
         $normalized
     );
-    if($normalized === null){
+    if($normalized === null) {
         throw new RuntimeException('Failed to normalize input');
     }
+    $chars = preg_split('//u', $normalized, -1, PREG_SPLIT_NO_EMPTY);
 }

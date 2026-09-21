@@ -10,7 +10,7 @@ function isPalindrome(string $text): bool
         '',
         $normalized
     );
-    if($normalized === null) {
+    if ($normalized === null) {
         throw new RuntimeException('Failed to normalize input');
     }
     $chars = preg_split('//u', $normalized, -1, PREG_SPLIT_NO_EMPTY);
@@ -19,5 +19,12 @@ function isPalindrome(string $text): bool
     }
     $left = 0;
     $right = count($chars) - 1;
-    
+    while ($left < $right) {
+        if ($chars[$left] !== $chars[$right]) {
+            return false;
+        }
+        $right--;
+        $left++;
+    }
+    return true;
 }
